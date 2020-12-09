@@ -42,3 +42,11 @@ public createMapper(): IMapper{
     …
     }
 }
+export interface IMapper {
+    reset(): void;
+    write(address: number, value: number): void;
+    load(addr: number): number;
+    regLoad(address: number): number;
+    regWrite(address: number, value: number): void;
+    loadROM(): void;
+}
