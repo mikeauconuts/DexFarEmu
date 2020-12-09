@@ -1,0 +1,44 @@
+export class CPU {
+     private REG_A: number;
+     private REG_X: number;
+     private REG_Y: number;
+     private REG_PC: number;
+     private REG_S: number;
+     private FLAG_N: number;
+     private FLAG_V: number;
+     private FLAG_B: number;
+     private FLAG_D: number;
+     private FLAG_I: number;
+     private FLAG_Z: number;
+     private FLAG_C: number;
+   public step(): number {
+             if (this.INT_requested) {
+         ...
+             }
+
+         …
+     var inst = this.read8(this.REG_PC);
+         …
+             switch (addrMode) {
+                ...
+             }
+
+             switch (opcode) {
+             ...
+             }
+             this.REG_PC += oplenth;
+             var totalCycles = opcycles + extraCycle;
+             return totalCycles;
+  }
+}
+public createMapper(): IMapper{
+    switch (this.mapperType) {
+        case 0:
+            return new Mapper0(this.machine);
+        break;
+        case 1:
+            return new Mapper1(this.machine);
+        break;
+    …
+    }
+}
