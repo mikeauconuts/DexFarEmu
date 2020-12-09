@@ -1,0 +1,11 @@
+Label Mneu Cc SetFlg Rd Rn Rm/imm Shift
+
+label1: add al s r1 r2 #456
+
+label2: and eq r0 r1 r4
+
+label3: sub al s r4 r2 r1 lsl#4
+
+adc al r3 r2 r4 ror#2
+
+label4: eor al s r0 r1 #&7FF
